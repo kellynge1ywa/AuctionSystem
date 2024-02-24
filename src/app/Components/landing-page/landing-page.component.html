@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="navbar">
+        <div class="logo">
+            <h1>BidMyArt</h1>
+        </div>
+        <div class="nav-links">
+           <nav>
+               <li><a routerLink="/home" >Discover</a></li>
+               <li><a  routerLink="/contact">Contacts</a></li>
+               <li><a routerLink="/about">About us</a></li>
+
+           </nav>
+            <div class="usericon">
+                <fa-icon  [icon]="fauser" size="2x" routerLink="/login"></fa-icon>
+
+            </div>
+            <!-- <ion-icon name="person-outline"></ion-icon> -->
+        </div>
+    </div>
+    <div class="content">
+        
+        <img src="./../../../assets/Image/Artgallery.jpg" alt="image" width="31%">
+
+        
+        <div class="content-info">
+            <span>Register today as a seller or bidder and start your bidding and selling streak with us.</span>
+            <div class="buttons">
+                <button routerLink="/login" class="btn1">Bid Now</button>
+                <button routerLink="/login" class="btn2">Sell Now</button>
+            </div>
+
+        </div>
+        
+    </div>
+    
+    
+</div>

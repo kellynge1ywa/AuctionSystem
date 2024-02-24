@@ -1,0 +1,86 @@
+/* Navbar styling */
+.navbar{
+    display: flex;
+    background: #000;
+    color: #fff;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.nav-links{
+    display: flex;
+    
+    position: relative;
+    align-items: center;
+    gap: 2rem;
+    right: 3rem;
+}
+.login{
+    display: flex;
+    gap: 2rem;
+}
+.login li{
+    list-style-type: none;
+
+}
+.login li a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.aside{
+    width: 10%;
+    height: 20vh;
+    border: 1px solid #000;
+    /* padding: auto; */
+   
+   
+}
+.aside nav{
+    display: grid;
+    gap: 1rem;
+    margin-left: 1rem;
+
+}
+.aside nav li{
+    list-style-type: none;
+}
+.aside nav li a{
+    text-decoration: none;
+    color: #000;
+    font-size: 1.2rem;
+}
+
+.mainbody{
+    display: flex;
+    width: 100%;
+    margin: 0 1rem;
+
+    
+}
+.mybids{
+    position: relative;
+    left: 2rem;
+    margin-top: 2rem;
+    width: 80%;
+}
+.bid{
+    display: flex;
+    justify-content: space-evenly;
+    border: 2px solid #000;
+    font-size: 1.5rem;
+    gap: 3rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    width: 70%;
+    margin: 0.5rem 0;
+}
+
+.pay{
+    padding: 0.4rem;
+    background: #000;
+    color: #fff;
+    font-size: 1.2rem;
+}

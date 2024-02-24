@@ -1,0 +1,82 @@
+/* Navbar styling */
+.navbar{
+    display: flex;
+    background: #000;
+    color: #fff;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.nav-links{
+    display: flex;
+    
+    position: relative;
+    align-items: center;
+    gap: 2rem;
+    right: 3rem;
+}
+.login{
+    display: flex;
+    gap: 2rem;
+}
+.login li{
+    list-style-type: none;
+
+}
+
+.login li a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+
+.items{
+    /* width: 100%; */
+    display: grid;
+    place-items: center;
+    padding-top: 1rem;
+    margin:  0 auto;
+    height: calc(100vh - 30px);
+    border: 1px solid black;
+    
+    
+    
+    
+    
+}
+.items > div {
+    
+    border: 1px solid black;
+    width: 70%;
+    height: 60vh;
+    border-radius: 0.5rem;
+
+}
+
+.artInfo{
+    height: 40vh;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center; 
+    flex-direction: column;
+    position: relative;
+    top: 2rem;
+
+}
+
+.upper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin:  0 auto;
+}
+
+.btn1{
+    width: 60%;
+    padding: 0.4rem;
+    background: orangered;
+    border: none;
+}

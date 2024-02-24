@@ -1,0 +1,95 @@
+<div class="login">
+    <div class="loginImg">
+        <h2 routerLink="/home">BidMyArt</h2>
+        
+    </div>
+    <div class="registrationform">
+        <h2>Please register here</h2>
+        <form [formGroup]="registrationform" (ngSubmit)="onSubmit()">
+            <div>
+                <label for="fullname">Fullname</label> <br>
+                <input type="text" id="fullname" formControlName="fullname" placeholder="Enter your name...">
+                <div *ngIf="registrationform.get('fullname')?.invalid && registrationform.get('fullname')?.touched">
+                    <div *ngIf="registrationform.get('fullname')?.errors?.['required']" style="color: red;">Name is required</div>
+                    <div *ngIf="registrationform.get('fullname')?.errors?.['minlength']" style="color: red;">Name must be atleast 5 characters</div>
+
+                </div>
+            </div>
+            <div>
+                <label for="email">Email</label> <br>
+                <input type="email" id="email" formControlName="email" placeholder="Enter your email...">
+                <div *ngIf="registrationform.get('email')?.invalid && registrationform.get('email')?.touched">
+                    <div *ngIf="registrationform.get('email')?.errors?.['required']" style="color: red;">Email is required</div>
+                    <div *ngIf="registrationform.get('email')?.errors?.['email']" style="color: red;">Email is invalid</div>
+
+                </div>
+            </div>
+            <div>
+                <label for="phone">Phone</label> <br>
+                <input type="phone" id="phone" formControlName="phone" placeholder="Enter your phone number...">
+                <div *ngIf="registrationform.get('phone')?.invalid && registrationform.get('phone')?.touched">
+                    <div *ngIf="registrationform.get('phone')?.errors?.['required']" style="color: red;">Mobile number is required</div>
+                    <div *ngIf="registrationform.get('phone')?.errors?.['phone']" style="color: red;">Mobile number is invalid</div>
+
+                </div>
+            </div>
+            <div>
+                <label for="dob">DOB</label> <br>
+                <input type="date" id="dob" formControlName="dob" placeholder="Enter your dob...">
+                <div *ngIf="registrationform.get('dob')?.invalid && registrationform.get('dob')?.touched">
+                    <div *ngIf="registrationform.get('dob')?.errors?.['required']" style="color: red;">Date of birth is required</div>
+                    <div *ngIf="registrationform.get('dob')?.errors?.['ageInvalid']" style="color: red;">You have not attained the minimum age</div>
+
+
+                </div>
+            </div>
+            <div>
+                <label for="category">Role</label><br>
+                <select formControlName="role" >
+                    <option>Bidder</option>
+                    <option>Seller</option>
+                </select>
+            </div>
+            <div>
+                <label for="password">Password</label><br>
+                <input type="password" id="password" formControlName="password" placeholder="Enter your password...">
+                <div *ngIf="registrationform.get('password')?.invalid && registrationform.get('password')?.touched">
+                    <div *ngIf="registrationform.get('password')?.errors?.['required']" style="color: red;">Password is required</div>
+                    <div class="text-red-400 text-sm" *ngIf="passwordFormField?.dirty">
+
+                        <span class="strong" *ngIf="{'text-primary': passwordFormField?.value?.match('^(?=.*[A-Z])')}">At least uppercase letter.</span> <br>
+                     
+                        <span class="strong"*ngIf="{'text-primary': passwordFormField?.value?.match('(?=.*[a-z])')}">At least one lowercase letter.</span> <br>
+                     
+                        <span class="strong" *ngIf="{'text-primary': passwordFormField?.value?.match('(.*[0-9].*)')}">At least one digit.</span> <br>
+                     
+                        <span class="strong" *ngIf="{'text-primary': passwordFormField?.value?.match('(?=.*[!@#$%^&*])')}">At least one special character.</span> <br>
+                     
+                        <span class="strong" *ngIf="{'text-primary': passwordFormField?.value?.match('.{8,}')}">At least 8 characters long.</span> <br>
+                     
+                     </div>
+                </div>
+            </div>
+          
+            <div>
+                <label for="cpassword">Confirm password</label><br>
+                <input type="password" id="cpassword" formControlName="confirmpassword" placeholder="Confirm password...">
+                
+                    <!-- <div *ngIf="registrationform.get('confirmpassword')?.errors?.['required']" style="color: red;">Confirm password is required</div> -->
+                <div *ngIf="registrationform.errors?.['mismatch']" style="color: red;">Password must match</div>
+
+                
+            </div>
+            
+            <div class="registerbtn">
+
+                <button type="submit">Register</button>
+            </div>
+            
+        </form>
+        <div class="loginlink">
+            <span>Have an account? <a routerLink="/login" style="color: red; text-decoration: none;" >Sign In</a></span>
+        </div>
+    </div>
+</div>
+

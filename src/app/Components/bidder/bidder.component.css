@@ -1,0 +1,84 @@
+/* Navbar styling */
+.navbar{
+    display: flex;
+    background: #000;
+    color: #fff;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.nav-links{
+    display: flex;
+    
+    position: relative;
+    align-items: center;
+    gap: 2rem;
+    right: 3rem;
+}
+.login{
+    display: flex;
+    gap: 2rem;
+}
+.login li{
+    list-style-type: none;
+
+}
+
+.login li a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.items{
+    width: 100%;
+    padding-top: 1rem;
+    position: relative;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    background: url('../../../assets/Image/background2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.item{
+   width: 250px;
+    padding-bottom: 1rem;
+    background: #D9D9D9;
+    border: 1px solid #000;
+    border-radius: 1rem;
+   
+    
+}
+
+
+.firstInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.firstInfo h5{
+    margin-top: 14px;
+}
+.firstInfo span{
+    margin: 10px 0;
+
+}
+.btn1{
+    width: 80%;
+    margin:  0 2rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    background: #EA7125;
+    border: none;
+    border-radius: 3rem;
+}

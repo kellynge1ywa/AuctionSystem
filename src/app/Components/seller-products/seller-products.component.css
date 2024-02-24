@@ -1,0 +1,93 @@
+/* Navbar styling */
+.navbar{
+    display: flex;
+    background: #000;
+    color: #fff;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.nav-links{
+    display: flex;
+    
+    position: relative;
+    align-items: center;
+    gap: 2rem;
+    right: 3rem;
+}
+.login{
+    display: flex;
+    gap: 2rem;
+}
+.login li{
+    list-style-type: none;
+
+}
+.login li a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+
+.aside{
+    width: 10%;
+    height: 20vh;
+    border: 1px solid #000;
+    /* padding: auto; */
+   
+   
+}
+.aside nav{
+    display: grid;
+    gap: 1rem;
+    margin-left: 1rem;
+
+}
+.aside nav li{
+    list-style-type: none;
+}
+.aside nav li a{
+    text-decoration: none;
+    color: #000;
+    font-size: 1.2rem;
+}
+
+.mainbody{
+    display: flex;
+    width: 100%;
+    height: 90vh;
+    padding: 0 1rem;
+    background: url('../../../assets/Image/background2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+
+    
+}
+.products{
+    width: 80%;
+    margin-top: 1rem;
+    position: relative;
+    left: 1rem;
+   
+   
+
+}
+
+table{
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid black;
+  	border-collapse: collapse;
+}
+th, td {
+    padding: 0 1rem;
+}
+
+

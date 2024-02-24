@@ -1,0 +1,19 @@
+<div class="body">
+    <div class="navbar">
+        <div class="heading">
+            <h1 routerLink="/home">BidMyArt</h1>
+        </div>
+        <div class="nav-links">
+            <div class="login">
+                <li><a routerLink="/bidder">Home</a></li>
+                <li><a routerLink="/seller">Sell</a></li>
+                <li><a routerLink="/mybids">My bids</a></li>
+            </div>
+
+            <div>
+                <fa-icon [icon]="faSignOut" (click)="logout()"size="2x"></fa-icon>
+            </div>
+        </div>
+        
+    </div>
+</div>

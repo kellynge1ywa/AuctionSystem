@@ -1,0 +1,60 @@
+<div>
+    <div class="navbar">
+        <div>
+            <h1 routerLink="/home">BidMyArt</h1>
+        </div>
+        <div class="nav-links">
+            <div class="login">
+                <li><a routerLink="/seller">Home</a></li>
+                <li><a routerLink="/bidder">Bid</a></li>
+                <li><a routerLink="/mybids">My bids</a></li>
+            </div>
+
+            <div>
+                <fa-icon [icon]="faSignOut" routerLink="/login" size="2x"></fa-icon>
+            </div>
+        </div>
+        
+    </div>
+    <div class="mainbody">
+        <div class="aside">
+            <nav>
+                <li><a routerLink="/admin" >Products/arts</a></li>
+                <li><a routerLink="/categories">Categories</a></li>
+                <li><a routerLink="/users" >Users</a></li>
+                <li><a routerLink="/bids" >Bids</a></li>
+                
+            </nav>
+
+        </div>
+        <div class="bids">
+            <table>
+                <tr>
+                    <th></th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Type</th>
+                    <th>Arts</th>
+                    <th>Bids</th>
+                    <th>Action</th>
+                </tr>
+                <tr *ngFor="let user of Users; index as k;">
+                    <td>{{k +1}}</td>
+                    <td>{{user.fullname}}</td>
+                    <td> <p>{{user.email}}</p></td>
+                    <td>{{user.roles}}</td>
+                    <td>50</td>
+                    <th>45</th>
+                    <td><button>Edit</button> <br> <button>Delete</button></td>
+                </tr>
+               
+               
+               
+            </table>
+
+        </div>
+
+    </div>
+</div>
+
+

@@ -1,0 +1,13 @@
+// import { AbstractControl, ValidationErrors, ValidatorFn } from '@angular/forms';
+
+// export function categoryMatchValidator(categories: Category[]): ValidatorFn {
+//   return (control: AbstractControl): ValidationErrors | null => {
+//     // Get the selected category name (assuming control.value is a string)
+//     const selectedCategoryName = control.value;
+
+//     // Find the matching category by name (assuming names are unique)
+//     const matchingCategory = categories.find(cat => cat.name === selectedCategoryName);
+
+//     return matchingCategory ? null : { notMatch: true }; // Use a consistent error key
+//   };
+// }

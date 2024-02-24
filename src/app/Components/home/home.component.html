@@ -1,0 +1,45 @@
+<div class="home">
+    
+    <div class="navbar">
+        <div>
+            <h1>BidMyArt</h1>
+        </div>
+        <div class="nav-links">
+            <div class="login">
+                <li><a routerLink="/seller">Sell</a></li>
+            </div>
+
+            <div>
+                <fa-icon [icon]="fauser" routerLink="/login" size="2x"></fa-icon>
+            </div>
+        </div>
+        
+    </div>
+    <div class="mainbody">
+        <div class="aside">
+            <nav>
+                <li><a href="">All categories</a></li>
+                <li><a href="">Category one</a></li>
+                <li><a href="">Category 2</a></li>
+                
+            </nav>
+
+        </div>
+        <div class="items">
+            <div *ngFor="let art of Arts">
+                <div class="item">
+                    <img style="border-radius:1rem ;"  [src]="art.image" width="100%" height="250" >
+                    <div class="btns">
+                        <button routerLink="/bidder" class="btn1">Bid</button>
+                        
+                    </div>
+                </div>
+
+            </div>
+            
+            
+            
+
+        </div>
+    </div>
+</div>

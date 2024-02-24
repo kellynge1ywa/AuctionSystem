@@ -1,0 +1,78 @@
+<div>
+    <div class="navbar">
+        <div>
+            <h1 routerLink="/home">BidMyArt</h1>
+        </div>
+        <div class="nav-links">
+            <div class="login">
+                <li><a routerLink="/seller">Home</a></li>
+                <li><a routerLink="/bidder">Bid</a></li>
+                <li><a routerLink="/mybids">My bids</a></li>
+            </div>
+
+            <div>
+                <fa-icon [icon]="faSignOut" (click)="logout()" size="2x"></fa-icon>
+            </div>
+        </div>
+        
+    </div>
+    <div class="mainbody">
+        <div class="aside">
+            <nav>
+                <li><a routerLink="/admin" >Products/arts</a></li>
+                <li><a routerLink="/categories">Categories</a></li>
+                <li><a routerLink="/users" >Users</a></li>
+                <li><a routerLink="/bids" >Bids</a></li>
+                
+            </nav>
+
+        </div>
+        <div class="bids">
+            <table>
+                <tr>
+                    <th></th>
+                    <th>Image URL</th>
+                    <th>Product</th>
+                    <th>Category</th>
+                    <th>Bid info</th>
+                    <th>Action</th>
+                </tr>
+                <tr *ngFor="let art of Arts; index as k">
+                    <td>{{k + 1 }}</td>
+                    <td class=""><img style="margin: 0.1rem;" [src]="art.image" [alt]="art.artName" height="50" width="100"></td>
+                    <td>{{art.artName}}</td>
+                    <td>{{art.category}}</td>
+                    <td><button>View</button></td>
+                    <td><button>Edit</button> <br> <button>Delete</button></td>
+                </tr>
+                <!-- <tr>
+                    <td>2</td>
+                    <td>Lion.jpg</td>
+                    <td>Lion art</td>
+                    <td>Drawing</td>
+                    <td><button>View</button></td>
+                    <td><button>Edit</button> <br> <button>Delete</button></td>
+                </tr> -->
+                <!-- <tr>
+                    <td>3</td>
+                    <td>Lion.jpg</td>
+                    <td>Lion art</td>
+                    <td>Drawing</td>
+                    <td><button>View</button></td>
+                    <td><button>Edit</button> <br> <button>Delete</button></td>
+                </tr> -->
+                <!-- <tr>
+                    <td>4</td>
+                    <td>Lion.jpg</td>
+                    <td>Lion art</td>
+                    <td>Drawing</td>
+                    <td><button>View</button></td>
+                    <td><button>Edit</button> <br> <button>Delete</button></td>
+                </tr> -->
+            </table>
+
+        </div>
+
+    </div>
+</div>
+

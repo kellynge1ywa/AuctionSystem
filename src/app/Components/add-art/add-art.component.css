@@ -1,0 +1,113 @@
+/* Navbar styling */
+.navbar{
+    display: flex;
+    background: #000;
+    color: #fff;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+.nav-links{
+    display: flex;
+    
+    position: relative;
+    align-items: center;
+    gap: 2rem;
+    right: 3rem;
+}
+.login{
+    display: flex;
+    gap: 2rem;
+}
+.login li{
+    list-style-type: none;
+
+}
+.login li a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.mainbody{
+    display: flex;
+    width: 100%;
+    height: 90vh;
+    padding: 0 1rem;
+    background: url('../../../assets/Image/background2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+
+    
+}
+
+.aside{
+    width: 10%;
+    height: 20vh;
+    border: 1px solid #000;
+    /* padding: auto; */
+   
+   
+}
+.aside nav{
+    display: grid;
+    gap: 1rem;
+    margin-left: 1rem;
+
+}
+.aside nav li{
+    list-style-type: none;
+}
+.aside nav li a{
+    text-decoration: none;
+    color: #000;
+    font-size: 1.2rem;
+}
+
+.addart{
+    position: relative;
+    left: 3rem;
+    width: 80%;
+}
+
+
+
+form{
+    width: 50%;
+    border:  1px solid #000;
+    padding: 1rem;
+   
+    
+}
+form label{
+    font-size: 1.2rem;
+}
+
+form input{
+    width: 70%;
+    padding: 0.3rem;
+}
+
+form select{
+    width: 70%;
+    padding: 0.3rem;
+
+}
+
+.addproduct{
+    margin-top: 0.4rem;
+}
+.addproduct button{
+    width: 80%;
+    padding: 0.5rem;
+    background: #000;
+    color: #fff;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 1rem;
+}
+.addproduct button:hover{
+    cursor: pointer;
+}

@@ -1,0 +1,105 @@
+<div>
+    <div class="navbar">
+        <div>
+            <h1 routerLink="/home">BidMyArt</h1>
+        </div>
+        <div class="nav-links">
+            <div class="login">
+                <li><a routerLink="/seller">Home</a></li>
+                <li><a routerLink="/bidder">Bid</a></li>
+                <li><a routerLink="/mybids">My bids</a></li>
+            </div>
+
+            <div>
+                <fa-icon [icon]="faSignOut" routerLink="/login" size="2x"></fa-icon>
+            </div>
+        </div>
+        
+    </div>
+    <div class="mainbody">
+        <div class="aside">
+            <nav>
+                <li><a routerLink="/seller">Bids</a></li>
+                <li><a routerLink="/addart">Add product</a></li>
+                <li><a routerLink="/sellerproducts">My products</a></li>
+                
+            </nav>
+
+        </div>
+        <div class="addart">
+            <h2>Add Art</h2>
+            <form [formGroup]="AddArtForm" (ngSubmit)="OnSubmit()">
+                <div>
+                    <label for="image">Image</label> <br>
+                    <input type="text" id="image" formControlName="image" placeholder="Enter image url" >
+                    <div *ngIf="AddArtForm.get('image')?.invalid && AddArtForm.get('image')?.touched">
+                        <div *ngIf="AddArtForm.get('image')?.errors?.['required']" style="color: red;">Image is required</div>
+                    </div>
+                </div>
+                <div>
+                    <label for="artname">ArtName</label><br>
+                    <input type="text" id="artname" formControlName="artname" placeholder="Enter art name" >
+                    <div *ngIf="AddArtForm.get('artname')?.invalid && AddArtForm.get('artname')?.touched">
+                        <div *ngIf="AddArtForm.get('artname')?.errors?.['required']" style="color: red;">ArtName is required</div>
+                    </div>
+                </div>
+                <div>
+                    <label for="price">Price</label><br>
+                    <input type="number" id="price" formControlName="price" placeholder="Enter art price" >
+                    <div *ngIf="AddArtForm.get('price')?.invalid && AddArtForm.get('price')?.touched">
+                        <div *ngIf="AddArtForm.get('price')?.errors?.['required']" style="color: red;">ArtName is required</div>
+                    </div>
+                </div>
+                <div>
+                    <label for="startingprice" style="font-weight: bolder;">Starting price</label><br>
+                    <input type="number" id="startingprice" formControlName="startingprice"placeholder="Enter starting price" >
+                    <div *ngIf="AddArtForm.get('startingprice')?.invalid && AddArtForm.get('startingprice')?.touched">
+                        <div *ngIf="AddArtForm.get('startingprice')?.errors?.['required']" style="color: red;">ArtName is required</div>
+                    </div>
+                </div>
+               
+                <div>
+                    <label for="description">Description</label><br>
+                    <input type="text" id="description" formControlName="description" placeholder="Enter art description" >
+                    <div *ngIf="AddArtForm.get('description')?.invalid && AddArtForm.get('description')?.touched">
+                        <div *ngIf="AddArtForm.get('description')?.errors?.['required']" style="color: red;">Description is required</div>
+                    </div>
+                </div>
+                
+                <div>
+                    <label for="bidstartdate">BidStartDate</label><br>
+                    <input type="date" id="bidstartdate" formControlName="bidstartdate" placeholder="Enter bidding start date" >
+                    <div *ngIf="AddArtForm.get('bidstartdate')?.invalid && AddArtForm.get('bidstartdate')?.touched">
+                        <div *ngIf="AddArtForm.get('bidstartdate')?.errors?.['required']" style="color: red;">Bidtartdate is required</div>
+                    </div>
+                </div>
+                <div>
+                    <label for="bidenddate">BindEndDate</label><br>
+                    <input type="date" id="bidenddate" formControlName="bidenddate" placeholder="Enter bidding end date" >
+                    <div *ngIf="AddArtForm.get('bidenddate')?.invalid && AddArtForm.get('bidenddate')?.touched">
+                        <div *ngIf="AddArtForm.get('bidenddate')?.errors?.['required']" style="color: red;">BidEnddate is required</div>
+                    </div>
+                </div>
+                <div>
+                    <label for="category">Category</label><br>
+                    <select formControlName="category" id="category" >
+                        <option *ngIf="Category">Select category</option>
+                        <option *ngFor="let cat of Category" [value]="cat.categoryId">{{cat.categoryName}} </option>
+                        <div *ngIf="AddArtForm.get('category')?.invalid && AddArtForm.get('category')?.touched">
+                            <p style="color: red;">Category is invalid</p>
+                            <div *ngIf="AddArtForm.get('category')?.errors?.['required']" style="color: red;">Category is required</div>
+                        </div>
+                        
+                        
+                    </select>
+                </div>
+               
+                <div class="addproduct">
+                    <button type="submit">Add product</button>
+
+                </div>
+
+            </form>
+        </div>
+    </div>    
+</div>

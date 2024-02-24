@@ -1,0 +1,80 @@
+.strong{
+    color: red;
+}
+
+.login{
+    display: flex;
+    width: 100%;
+}
+.loginImg{
+    background: url('../../../assets/Image/Homepage.jpg');
+    width: 35%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    /* height: 100vh; */
+}
+.loginImg h2{
+    color: red;
+}
+.registrationform{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+   
+    align-items: center;
+    justify-content: center;
+  
+    
+}
+.registrationform form{
+    width: 60%;
+} 
+
+form{
+    width: 100%;
+   
+    
+}
+form label{
+    font-size: 1.6rem;
+}
+
+form input{
+    width: 80%;
+    padding: 0.3rem;
+}
+form select{
+    width: 80%;
+    padding: 0.3rem;
+}
+
+input.ng-invalid.ng-touched{
+    border: 1px solid #ff0000;
+}
+
+.registerbtn{
+    margin-top: 0.4rem;
+}
+.registerbtn button{
+    width: 80%;
+    padding: 0.5rem;
+    background: #000;
+    color: #fff;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 1rem;
+}
+.registerbtn button:hover{
+    cursor: pointer;
+}
+
+.loginlink{
+    position: relative;
+    right: 9rem;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+
+}
+

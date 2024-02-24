@@ -1,0 +1,88 @@
+<div>
+    <!-- <div class="navbar">
+        <div>
+            <h1 routerLink="/home">BidMyArt</h1>
+        </div>
+        <div class="nav-links">
+            <div class="login">
+                <li><a routerLink="/bidder">Home</a></li>
+                <li><a routerLink="/seller">Sell</a></li>
+                <li><a routerLink="/mybids">My bids</a></li>
+            </div>
+
+            <div>
+                <fa-icon [icon]="faSignOut" (click)="logout()"size="2x"></fa-icon>
+            </div>
+        </div>
+        
+    </div> -->
+    <navbar></navbar>
+    <div class="items">
+        <div *ngFor="let art of Arts ">
+
+            <div class="item">
+                <img style="border-radius:1rem ;" [src]="art.image" width="100%" height="250" >
+                <div class="artInfo">
+                    <div class="upper">
+    
+                        <div class="firstInfo">
+                            <h5>{{art.artName}}</h5>
+                            <span>{{art.price}}</span>
+                        </div>
+                        
+                    </div>
+                    <button  class="btn1"  [routerLink]="['/art-details/', art.id]">View details</button>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="item">
+            <img style="border-radius:1rem ;"  src="../../../assets/Image/eagle.jpg" width="100%" height="250" >
+            <div class="artInfo">
+                <div class="upper">
+
+                    <div class="firstInfo">
+                        <h3>LionS</h3>
+                        <h3>Drawing</h3>
+                    </div>
+                    
+                </div>
+                <button  class="btn1">View details</button>
+                
+            </div>
+        </div> -->
+        <!-- <div class="item">
+            <img style="border-radius:1rem ;"  src="../../../assets/Image/eagle.jpg" width="100%" height="250" >
+            <div class="artInfo">
+                <div class="upper">
+
+                    <div class="firstInfo">
+                        <h3>LionS</h3>
+                        <h3>Drawing</h3>
+                    </div>
+                    
+                </div>
+                <button  class="btn1">View details</button>
+                
+            </div>
+        </div> -->
+        <!-- <div class="item">
+            <img style="border-radius:1rem ;"  src="../../../assets/Image/eagle.jpg" width="100%" height="250" >
+            <div class="artInfo">
+                <div class="upper">
+
+                    <div class="firstInfo">
+                        <h3>LionS</h3>
+                        <h3>Drawing</h3>
+                    </div>
+                    
+                </div>
+                <button  class="btn1">View details</button>
+                
+            </div>
+        </div> -->
+
+    </div>
+
+</div>

@@ -1,0 +1,88 @@
+
+.login{
+    display: flex;
+    width: 100%;
+}
+.loginImg{
+    background: url('../../../assets/Image/Homepage.jpg');
+    width: 35%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    /* height: 100vh; */
+}
+.loginImg h2{
+    color: red;
+}
+.loginform{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 7rem;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+   
+}
+.loginform h2{
+    font-size: 1.7rem;
+    align-items: center;
+    position: relative;
+    /* left: 6rem; */
+
+}
+form{
+    width: 100%;
+   
+    
+}
+form label{
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+form input{
+    width: 80%;
+    padding: 0.3rem;
+    margin:6px 0;
+}
+
+input.ng-invalid.ng-touched{
+    border: 1px solid #ff0000;
+}
+
+.resetp{
+    color: #ff0000;
+    position: relative;
+    left: 18.5rem;
+    font-size: 0.8rem;
+}
+
+.resetp:hover{
+    cursor: pointer;
+}
+
+.loginbtn{
+    margin-top: 0.4rem;
+}
+.loginbtn button{
+    width: 80%;
+    padding: 0.5rem;
+    background: #000;
+    color: #fff;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 1rem;
+}
+.loginbtn button:hover{
+    cursor: pointer;
+}
+
+.registerlink{
+    position: relative;
+    right: 10.5rem;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
