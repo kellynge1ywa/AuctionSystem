@@ -47,4 +47,10 @@ export class BidService {
       map(res => res.result)
     )
   }
+
+  getBidByBidId(BidId:string){
+    return this.http.get<{result:Bid}>(`https://localhost:7061/api/Bids/${BidId}`,{headers:this.createAuthorizationHeader()}).pipe(
+      map(res=>res.result)
+    )
+  }
 }

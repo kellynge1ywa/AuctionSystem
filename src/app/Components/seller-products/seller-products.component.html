@@ -35,22 +35,24 @@
                     <th>Image URL</th>
                     <th>Name</th>
                     <th>Category</th>
-                    <th>Description</th>
+                  
                     <th>Price</th>
                     <th>Bid start date</th>
                     <th>Bid end date</th>
                     <th>Starting price</th>
+                    <th>Art bids</th>
                 </tr>
                 <tr *ngFor="let art of Arts; index as k">
                     <td>{{k + 1 }}</td>
                     <td class=""><img style="margin: 0.1rem;" [src]="art.image" [alt]="art.artName" height="50" width="100"></td>
                     <td>{{art.artName}}</td>
                     <td>{{art.category}}</td>
-                    <td>{{art.description}}</td>
-                    <td>{{art.price}}</td>
+                    
+                    <td>{{art.price | currency:'Ksh'}}</td>
                     <td>{{art.bidStartDate}}</td>
                     <td>{{art.bidEndDate}}</td>
-                    <td>{{art.startingPrice}}</td>
+                    <td>{{art.startingPrice | currency:'Ksh'}}</td>
+                    <td><button>View bids</button></td>
                 </tr>
                
                

@@ -41,18 +41,17 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
-    background: url('../../../assets/Image/background2.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    /* background-color: #D9D9D9; */
+   
+  
 }
 
 
 .item{
    width: 250px;
     padding-bottom: 1rem;
-    background: #D9D9D9;
-    border: 1px solid #000;
+    background: #fff;
+    /* border: 1px solid #000; */
     border-radius: 1rem;
    
     
@@ -79,6 +78,12 @@
     padding: 0.5rem;
     font-size: 1rem;
     background: #EA7125;
+    cursor: pointer;
     border: none;
+    color: #3d3b3b;
     border-radius: 3rem;
+}
+
+.btn1:hover{
+    color: #000;
 }

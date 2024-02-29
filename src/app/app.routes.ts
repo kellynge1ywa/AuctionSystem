@@ -19,6 +19,7 @@ import { BidsComponent } from './Components/bids/bids.component';
 import { ViewArtComponent } from './Components/view-art/view-art.component';
 import { authGuard } from './Guards/auth.guard';
 import { roleGuardsGuard } from './Guards/role.guard';
+import { PaymentsComponent } from './Components/payments/payments.component';
 
 
 
@@ -43,7 +44,8 @@ export const routes: Routes = [
     {path:'categories', component:ArtCategoriesComponent},
     {path:'users', component:AllUsersComponent},
     {path:'bids', component:BidsComponent},
-    {path:'art-details/:id',component:ViewArtComponent}
+    {path:'art-details/:id',component:ViewArtComponent},
+    {path:'payments', component:PaymentsComponent,canActivate:[roleGuardsGuard]}
 
     // {path:'navbar', component:NavbarComponent}
 ];

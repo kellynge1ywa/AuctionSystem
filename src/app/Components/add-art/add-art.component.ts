@@ -21,11 +21,11 @@ import { TokenService } from '../../Authentication/token.service';
 })
 export class AddArtComponent implements OnInit {
   faSignOut=faSignOut;
-  AddArtForm!:FormGroup;
-  Category!:Category[];
   OneCategory!:Category;
   Arts:Art[]=[];
   Art!:Art;
+  AddArtForm!:FormGroup;
+  Category:Category[]=[];
 
   constructor(private tokenS:TokenService,private store:Store<appState>,private artService:ArtService, private router:Router, private categoryService:CategoryService){
    

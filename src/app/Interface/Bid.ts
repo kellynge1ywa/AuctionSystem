@@ -1,6 +1,7 @@
 export interface Bid {
     id: string;
     bidAmount: number;
+    artName:string,
     highestBidAmount: number;
     bidEndDate: string;
     status: string;

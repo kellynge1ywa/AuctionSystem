@@ -84,7 +84,7 @@
                     <label for="category">Category</label><br>
                     <select formControlName="category" id="category" >
                         <option *ngIf="Category">Select category</option>
-                        <option *ngFor="let cat of Category" [value]="cat.categoryId">{{cat.categoryName}} </option>
+                        <option *ngFor="let cat of Category" [value]="cat.categoryName">{{cat.categoryName}} </option>
                         <div *ngIf="AddArtForm.get('category')?.invalid && AddArtForm.get('category')?.touched">
                             <p style="color: red;">Category is invalid</p>
                             <div *ngIf="AddArtForm.get('category')?.errors?.['required']" style="color: red;">Category is required</div>

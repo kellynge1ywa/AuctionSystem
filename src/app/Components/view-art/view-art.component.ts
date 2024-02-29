@@ -8,11 +8,12 @@ import { ArtService } from '../../Services/art.service';
 import { AddBidDto, Bid } from '../../Interface/Bid';
 import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { BidService } from '../../Services/bid.service';
+import { Navbar } from '../navbar/navbar.component';
 
 @Component({
   selector: 'app-view-art',
   standalone: true,
-  imports: [CommonModule,FontAwesomeModule, RouterModule,ReactiveFormsModule,FormsModule],
+  imports: [CommonModule,FontAwesomeModule, RouterModule,ReactiveFormsModule,FormsModule,Navbar],
   templateUrl: './view-art.component.html',
   styleUrl: './view-art.component.css'
 })

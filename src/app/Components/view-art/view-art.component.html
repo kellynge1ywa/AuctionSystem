@@ -1,48 +1,47 @@
 <div>
-    <div class="navbar">
-        <div>
-            <h1 routerLink="/home">BidMyArt</h1>
-        </div>
-        <div class="nav-links">
-            <div class="login">
-                <li><a routerLink="/bidder">Home</a></li>
-                <li><a routerLink="/seller">Sell</a></li>
-                <li><a routerLink="/login">Login</a></li>
-            </div>
-
-            <div>
-                <fa-icon [icon]="faSignOut" routerLink="/login" size="2x"></fa-icon>
-            </div>
-        </div>
-        
-    </div>
+   
+    <navbar></navbar>
     <div class="items">
         <div *ngIf="Art">
 
 
             <div class="item">
                 
-                <img  [src]="Art.image" width="100%" height="250" >
+                <img  [src]="Art.image" width="600vw" height="300" style="border-radius: 0.5rem;" >
                 <div class="artInfo">
                     <div class="upper">
     
                         <div class="firstInfo">
                             <h3>{{Art.artName}}</h3>
-                            <span>Amazing art</span>
+                            <span class="desc">Amazing art</span>
                             <h3>{{Art.category}}</h3>
                         </div>
                         <div class="secondInfo">
-                            <span>Starting Price:{{Art.startingPrice}}</span> <br>
-                            <span>My bid:{{bidAmount}}</span> <br>
-                            <span>Highest Bid:{{Art.highestBidAmount}}</span><br>
-                            <span>Bid end date:{{Art.bidEndDate}}</span>
+                            <div class="price1">
+                                <span class="span1a">Starting Price:</span>
+                                <span>{{Art.startingPrice | currency:'Ksh':'symbol':'0.0-0'}}</span>
+                            </div>
+                            <div class="price2">
+                                <span class="span2a">My bid:</span>
+                                <span>{{bidAmount | currency:'Ksh':'symbol':'0.0-0'}}</span>
+                            </div>
+                            <div class="price3">
+                                <span class="span3a">Highest Bid:</span>
+                                <span>{{Art.highestBidAmount | currency:'Ksh':'symbol':'0.0-0'}}</span>
+                            </div>
+                            <div class="bidEndDate">
+                                <span class="span4a">Bid end date:</span>
+                                <span>{{Art.bidEndDate | date:'medium'}}</span>
+                            </div>
+                       
                         </div>
                     </div>
+                    
                     <div *ngIf="showBidInput">
                         <input *ngIf="showBidInput"  type="number"  [(ngModel)]="bidAmount" placeholder="Enter your bid">
                         <button (click)="PlaceYourBid(bidAmount)">Place Bid</button>
                         <button *ngIf="showBidInput" (click)="Close()">Cancel</button>
-
+                        
                     </div>
                     <button (click)="OpenAndCloseBid()" class="btn1">Bid</button>
                     
